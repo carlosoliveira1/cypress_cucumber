@@ -19,7 +19,10 @@ class LoginPage {
     LogarNoSite() {
         cy.get(loginElements.inputEmail()).type('teste000@test.com')
         cy.get(loginElements.inputSenha()).type('4kC8A3@kbUP4r8T')
-        //cy.get(loginElements.LogarNoSite()).should('contain', 'Esqueceu sua senha?')
+        cy.get('#SubmitLogin > span').click()
+        cy.get('.page-heading').should('contain', 'My account')
+        
+        
     }
 }
 

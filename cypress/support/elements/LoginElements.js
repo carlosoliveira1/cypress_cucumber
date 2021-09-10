@@ -6,7 +6,9 @@ class LoginElements {
 
     inputSenha = () => { return '#passwd' }
   
-    botaoSignIn = () => { return '.SubmitLogin > span' }
+    botaoSignIn = () => { return '#SubmitLogin > span' }
+
+    
   }
   
   export default LoginElements;
