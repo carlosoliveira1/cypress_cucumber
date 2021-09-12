@@ -7,6 +7,7 @@ class CadastroElements {
     botaoCreateAcount = () => {'#SubmitCreate > span'}
 
 
+
     
 
 

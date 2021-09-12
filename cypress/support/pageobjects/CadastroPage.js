@@ -4,9 +4,16 @@
 import CadastroElements from '../elements/CadastroElements'
 const cadastroElements = new CadastroElements
 const url = Cypress.config("baseUrl")
-const faker = require('faker')
+import faker from 'faker'
+//const faker = require('faker-br')
+
+
+
 
 class CadastroPage {
+
+
+
     // Acessa o site que será testado
     acessarSite() {
         cy.visit(url)
@@ -18,32 +25,32 @@ class CadastroPage {
     }
 
     informaremail() {
-        cy.get(cadastroElements.emailCad()).type('carloso1@email.com');
+        cy.get(cadastroElements.emailCad()).type(faker.internet.email());
         cy.get('#SubmitCreate > span').click()
 
     }
 
-     
-    preencherFormCad(){
+
+    preencherFormCad() {
         cy.get('#id_gender1').click();
-        cy.get('#customer_firstname').type('Carlos');
-        cy.get('#customer_lastname').type('Oliveira');
-        cy.get('#passwd').type('1234567');
+        cy.get('#customer_firstname').type(faker.name.firstName());
+        cy.get('#customer_lastname').type(faker.name.lastName());
+        cy.get('#passwd').type(faker.internet.password());
         cy.get('#days').select('5').should('have.value', '5')
         cy.get('#months').select('7').should('have.value', '7')
         cy.get('#years').select('1980').should('have.value', '1980')
         cy.get('#optin').click()
-        cy.get('#company').type('Conductor')
-        cy.get('#address1').type('Rua do Carmo - 43 - 9º andar - 20011020  ')
-        cy.get('#address2').type('Rio de janeiro - 36')
-        cy.get('#city').type('Rio de janeiro')
+        cy.get('#company').type(faker.company.companyName())
+        cy.get('#address1').type(faker.address.streetAddress())
+        cy.get('#address2').type(faker.address.secondaryAddress())
+        cy.get('#city').type(faker.address.city())
         cy.get('#id_state').select('Oklahoma').should('have.value', '36')
-        cy.get('#postcode').type('01200')
-        cy.get('#other').type('Teste de campo de informação.')
-        cy.get('#phone').type('9865479898')
-        cy.get('#phone_mobile').type('9865479898')
+        cy.get('#postcode').type(faker.address.zipCodeByState())
+        cy.get('#other').type(faker.lorem.paragraph())
+        cy.get('#phone').type(faker.phone.phoneNumber())
+        cy.get('#phone_mobile').type(faker.phone.phoneNumberFormat())
         cy.get('#alias').clear()// Foi a forma que encontrei para a apafar o texto que estava no campo
-        cy.get('#alias').type('carlosoloveiramauricio@gmail.com')
+        cy.get('#alias').type(faker.internet.email())
         //cy.get('#submitAccount > span').click();
 
 
@@ -55,5 +62,8 @@ class CadastroPage {
 
 
 }
+
+
+
 
 export default CadastroPage;

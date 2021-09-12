@@ -4,6 +4,7 @@ import LoginElements from '../elements/LoginElements'
 const loginElements = new LoginElements
 const url = Cypress.config("baseUrl")
 
+
 class LoginPage {
     // Acessa o site que será testado
     acessarSite() {
