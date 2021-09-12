@@ -11,12 +11,12 @@ class LoginPage {
     }
 
     // Clica no botão que acessa a página de login do site
-    clicarBotaoPaginaLogin() {
+     clicarBotaoPaginaLogin() {
         cy.get(loginElements.botaoLogin()).click()
     }
   
     
-    LogarNoSite() {
+    realizarLogin() {
         cy.get(loginElements.inputEmail()).type('teste000@test.com')
         cy.get(loginElements.inputSenha()).type('4kC8A3@kbUP4r8T')
         cy.get('#SubmitLogin > span').click()

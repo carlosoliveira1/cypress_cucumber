@@ -3,12 +3,13 @@
     "cypress": "^8.3.1",
     "cypress-cucumber-preprocessor": "^4.2.0"
   },
-
-
   "scripts": {
-      "test:chrome": "cypress run --browser chrome --no-exit"
+    "test:chrome": "cypress run --browser chrome --no-exit"
   },
   "cypress-cucumber-preprocessor": {
-      "step_definitions": "cypress/support/steps"
+    "step_definitions": "cypress/support/steps"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
   }
 }
