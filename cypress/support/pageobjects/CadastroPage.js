@@ -5,6 +5,7 @@ import CadastroElements from '../elements/CadastroElements'
 const cadastroElements = new CadastroElements
 const url = Cypress.config("baseUrl")
 import faker from 'faker'
+faker.locale = 'pt_BR'
 //const faker = require('faker-br')
 
 
@@ -25,6 +26,7 @@ class CadastroPage {
     }
 
     informaremail() {
+       
         cy.get(cadastroElements.emailCad()).type(faker.internet.email());
         cy.get('#SubmitCreate > span').click()
 
