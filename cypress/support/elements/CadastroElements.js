@@ -1,12 +1,12 @@
 class CadastroElements {
 
-    cadBotaoLogin = () => { return '.login' }
+    cadBotaoLogin = () => { return 'a[class="login"]' }
 
-    emailCad = () => { return '#email_create' }
+    emailCad = () => { return 'input[name="email_create"]' }
 
-    botaoCreateAcount = () => { '#SubmitCreate > span' }
+    botaoCreateAcount = () => { 'button[name="SubmitCreate"]' }
 
-    radioGender = () => { return '#id_gender1' }
+    radioGender = () => { return 'input[id="id_gender1"]' }
 
     fieldName = () => { return '#customer_firstname' }
 
