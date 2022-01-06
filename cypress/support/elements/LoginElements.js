@@ -1,14 +1,19 @@
 class LoginElements {
+  botaoLogin = () => {
+    return 'a[class="login"]';
+  };
 
-    botaoLogin = () => { return '.login' }
+  inputEmail = () => {
+    return 'input[name="email"][data-validate="isEmail"]';
+  };
 
-    inputEmail = () => { return '#email' }
+  inputSenha = () => {
+    return 'input[type="password"]';
+  };
 
-    inputSenha = () => { return '#passwd' }
-  
-    botaoSignIn = () => { return '#SubmitLogin > span' }
+  botaoSignIn = () => {
+    return 'button[type="submit"][name="SubmitLogin"]';
+  };
+}
 
-    
-  }
-  
-  export default LoginElements;
+export default LoginElements;
