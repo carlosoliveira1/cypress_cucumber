@@ -1,56 +1,90 @@
 class CadastroElements {
+  cadBotaoLogin = () => {
+    return 'a[class="login"]';
+  };
 
-    cadBotaoLogin = () => { return 'a[class="login"]' }
+  emailCad = () => {
+    return 'input[name="email_create"]';
+  };
 
-    emailCad = () => { return 'input[name="email_create"]' }
+  botaoCreateAcount = () => {
+    'button[name="SubmitCreate"]';
+  };
 
-    botaoCreateAcount = () => { 'button[name="SubmitCreate"]' }
+  radioGender = () => {
+    return 'input[id="id_gender1"]';
+  };
 
-    radioGender = () => { return 'input[id="id_gender1"]' }
+  fieldName = () => {
+    return "input[id=customer_firstname]";
+  };
 
-    fieldName = () => { return '#customer_firstname' }
+  fieldLastName = () => {
+    return 'input[name="customer_lastname"]';
+  };
 
-    fieldLastName = () => { return '#customer_lastname' }
+  fieldPassw = () => {
+    return 'input[type="password"]';
+  };
 
-    fieldPassw = () => { return '#passwd' }
+  selectDays = () => {
+    return 'select[name="days"]';
+  };
 
-    selectDays = () => { return '#days' }
+  selectMonths = () => {
+    return 'select[name="months"]';
+  };
 
-    selectMonths = () => { return '#months' }
+  years = () => {
+    return 'select[name="years"]';
+  };
+  newsletter = () => {
+    return 'input[type="checkbox"][name="newsletter"]';
+  };
 
+  optin = () => {
+    return 'input[type="checkbox"][name="optin"]';
+  };
 
-    years = () => { return '#years' }
+  companyName = () => {
+    return 'input[name="company"]';
+  };
 
-    optin = () => { return '#optin' }
+  adress1 = () => {
+    return 'input[name="address1"]';
+  };
 
-    companyName = () => { return '#company' }
+  adress2 = () => {
+    return 'input[name="address2"]';
+  };
 
-    adress1 = () => { return '#address1' }
+  cityName = () => {
+    return 'input[name="city"]';
+  };
 
-    adress2 = () => { return '#address2' }
+  idState = () => {
+    'select[name="id_state"]';
+  };
 
-    cityName = () => { return '#city' }
+  postcode = () => {
+    return 'input[name="postcode"]';
+  };
 
-    idState = () => { '#id_state' }
+  other = () => {
+    return 'textarea[name="other"]';
+  };
 
-    postcode = () => { return '#postcode' }
+  phone = () => {
+    return 'input[name="phone"]';
+  };
 
-    other = () => { return '#other' }
+  phone_mobile = () => {
+    return 'input[name="phone_mobile"]';
+  };
 
-    phone = () => { return '#phone' }
-
-    phone_mobile = () => { return '#phone_mobile' }
-
-    alias = () => { return '#alias' }
-
-
-
-
-
+  alias = () => {
+    return 'input[name="alias"]';
+  };
 }
 
 export default CadastroElements;
-
-
-
-
