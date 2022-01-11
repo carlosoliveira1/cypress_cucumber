@@ -20,30 +20,38 @@ class CadastroPage {
 
   informaremail() {
     cy.get(cadastroElements.emailCad()).type(faker.internet.email());
-    cy.get("#SubmitCreate > span").click();
+    cy.get(cadastroElements.SubmitCreate()).click();
   }
 
   preencherFormCad() {
-    cy.get('input[id="id_gender1"]').click();
-    cy.get('input[id="customer_firstname"]').type(faker.name.firstName());
-    cy.get('input[name="customer_lastname"]').type(faker.name.lastName());
-    cy.get('input[type="password"]').type(faker.internet.password());
-    cy.get('select[name="days"]').select("5").should("have.value", "5");
-    cy.get('select[name="months"]').select("7").should("have.value", "7");
-    cy.get('select[name="years"]').select("1980").should("have.value", "1980");
-    cy.get('input[type="checkbox"][name="newsletter').click();
-    cy.get('input[type="checkbox"][name="optin"]').click();
-    cy.get('input[name="company"]').type(faker.company.companyName());
-    cy.get('input[name="address1"]').type(faker.address.streetAddress());
-    cy.get('input[name="address2"]').type(faker.address.secondaryAddress());
-    cy.get('input[name="city"]').type(faker.address.city());
-    cy.get('select[name="id_state"]').select("Oklahoma").should("have.value", "36");
-    cy.get('input[name="postcode"]').type(faker.address.zipCodeByState());
-    cy.get( 'textarea[name="other"]').type(faker.lorem.paragraph());
-    cy.get('input[name="phone"]').type(faker.phone.phoneNumber());
-    cy.get( 'input[name="phone_mobile"]').type(faker.phone.phoneNumberFormat());
-    cy.get('input[name="alias"]').clear(); // Foi a forma que encontrei para a apafar o texto que estava no campo
-    cy.get('input[name="alias"]').type(faker.internet.email());
+    cy.get(cadastroElements.radioGender()).click();
+    cy.get(cadastroElements.firstname()).type(faker.name.firstName());
+    cy.get(cadastroElements.lastname()).type(faker.name.lastName());
+    cy.get(cadastroElements.fieldPassw()).type(faker.internet.password());
+    cy.get(cadastroElements.selectDays()).select("5").should("have.value", "5");
+    cy.get(cadastroElements.selectMonths())
+      .select("7")
+      .should("have.value", "7");
+    cy.get(cadastroElements.years())
+      .select("1980")
+      .should("have.value", "1980");
+    cy.get(cadastroElements.newsletter()).click();
+    cy.get(cadastroElements.optin()).click();
+    cy.get(cadastroElements.companyName()).type(faker.company.companyName());
+    cy.get(cadastroElements.adress1()).type(faker.address.streetAddress());
+    cy.get(cadastroElements.adress2()).type(faker.address.secondaryAddress());
+    cy.get(cadastroElements.cityName()).type(faker.address.city());
+    cy.get(cadastroElements.idState())
+      .select("Oklahoma")
+      .should("have.value", "36");
+    cy.get(cadastroElements.postcode()).type(faker.address.zipCodeByState());
+    cy.get(cadastroElements.other()).type(faker.lorem.paragraph());
+    cy.get(cadastroElements.phone()).type(faker.phone.phoneNumber());
+    cy.get(cadastroElements.phone_mobile()).type(
+      faker.phone.phoneNumberFormat()
+    );
+    cy.get(cadastroElements.alias()).clear();
+    cy.get(cadastroElements.alias()).type(faker.internet.email());
     //cy.get('#submitAccount > span').click();
   }
 }

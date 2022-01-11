@@ -7,19 +7,19 @@ class CadastroElements {
     return 'input[name="email_create"]';
   };
 
-  botaoCreateAcount = () => {
-    'button[name="SubmitCreate"]';
+  SubmitCreate = () => {
+    return 'button[id="SubmitCreate"]';
   };
 
   radioGender = () => {
     return 'input[id="id_gender1"]';
   };
 
-  fieldName = () => {
+  firstname = () => {
     return "input[id=customer_firstname]";
   };
 
-  fieldLastName = () => {
+  lastname = () => {
     return 'input[name="customer_lastname"]';
   };
 
@@ -63,7 +63,7 @@ class CadastroElements {
   };
 
   idState = () => {
-    'select[name="id_state"]';
+    return 'select[name="id_state"]';
   };
 
   postcode = () => {
